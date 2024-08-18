@@ -33,7 +33,7 @@ function Navbar() {
     return (
         <Stack
             direction="row"
-            className={`w-full h-16 px-6 flex items-center fixed z-50 top-0 bg-BgPrimary`}
+            className={`w-full h-16 px-6 py-2 flex items-center relative z-50 top-0 bg-BgPrimary`}
         >
            <Stack className="w-1/3">
             <img className="w-40 h-auto" src={logo} alt="logo" />
@@ -70,7 +70,7 @@ function Navbar() {
                         </div>
                     );
                 })}
-                <Button border="2px" variant={"solid"} size={"xl"} className="p-2">Partner Login</Button>
+                <Button border="2px" borderColor="#0F2167" color="#0F2167" size={"xl"} className="p-2">Partner Login</Button>
 
                 <div className="xl:hidden">
                     <IconButton
@@ -86,10 +86,12 @@ function Navbar() {
                 <DrawerOverlay />
                 <DrawerContent>
                     <DrawerCloseButton />
-                    <Stack direction="column" className="mt-20">
+                     <img className="ml-4 mt-4 w-40 h-auto" src={logo} alt="logo" />
+                    <Stack direction="column" className="mt-4">
                         {links.map(({ id, links }) => {
                             return (
                                 <div key={id}>
+                                   
                                     {links.map((link) => {
                                         const isActive = window.location.pathname === link.href;
                                         return (
