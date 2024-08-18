@@ -1,22 +1,14 @@
 import React from "react";
-import { Button, Stack } from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react'
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <Stack spacing={4} direction='row' align='center'>
-  <Button colorScheme='teal' size='xs'>
-    Button
-  </Button>
-  <Button colorScheme='teal' size='sm'>
-    Button
-  </Button>
-  <Button colorScheme='teal' size='md'>
-    Button
-  </Button>
-  <Button colorScheme='teal' size='lg'>
-    Button
-  </Button>
-</Stack>
+    <Stack className="bg-BgPrimary h-400">
+    <Navbar />
+    <Home />
+    </Stack>
   );
 }
 
